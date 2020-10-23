@@ -1,0 +1,7 @@
+<head>
+  {{ $css := resources.Get "css/style.scss" }}
+  {{ $css = $css | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+  {{- partial "regions/head.html" . -}}
+</head>

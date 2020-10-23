@@ -1,0 +1,3 @@
+div#page-rights {
+  @include hgd-region("div#page-rights", "warning", 100px);
+}

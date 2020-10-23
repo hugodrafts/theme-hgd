@@ -1,0 +1,6 @@
+<div class="services danger" data-hgd-role="block" data-hgd-name="div.services">
+  {{ if .Get "title" -}}
+    <h2>{{ .Get "title" }}</h2>
+  {{- end }}
+  {{- .Inner -}}
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  {{- partial "regions/defs/head.html" . -}}
+  
+  <body>
+    <div class="wrapper">
+      {{- partial "regions/defs/header.html" . -}}
+
+      <article id="page-content">
+        <div class="wrapper">
+          {{- block "content" . }}{{- end }}
+        </div>
+      </article>
+
+      {{- partial "regions/defs/footer.html" . -}}
+
+      {{- partial "regions/defs/rights.html" . -}}
+    </div>
+  </body>
+</html>

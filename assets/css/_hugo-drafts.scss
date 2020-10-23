@@ -1,0 +1,84 @@
+@mixin hgd-body() {
+  @extend .border;
+  @extend .border-dark;
+  @extend .rounded;
+  position: relative;
+
+  &:before {
+    @extend .badge;
+    @extend .badge-dark;
+    position: absolute;
+    
+    content: "body";
+
+    @extend .m-1;
+    right: 0;
+  }
+
+  > div.wrapper {
+    @extend .border;
+    @extend .border-dark;
+    @extend .p-4;
+    position: relative;
+
+    margin: 20px;
+    margin-top: 30px;
+
+    &:before {
+      @extend .badge;
+      @extend .badge-dark;
+      @extend .mr-1;
+      @extend .mt-1;
+      right: 0;
+      top: 0;
+      position: absolute;
+
+      content: "body > div.wrapper";
+    }
+  }
+}
+
+@mixin hgd-region($element, $class: secondary, $min-height: 150px) {
+  @extend .border;
+  @extend .border-#{$class};
+  @extend .rounded;
+  min-height: $min-height;
+  position: relative;
+
+  &:before {
+    @extend .badge;
+    @extend .badge-#{$class};
+    position: absolute;
+    
+    content: $element;
+
+    @extend .m-1;
+    right: 0;
+  }
+
+  > div.wrapper {
+    @extend .border;
+    @extend .border-#{$class};
+    @extend .rounded;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    position: relative;
+
+    margin: 20px;
+    margin-top: 30px;
+    min-height: calc(#{$min-height} - 40px);
+
+    &:before {
+      @extend .badge;
+      @extend .badge-#{$class};
+      @extend .mr-1;
+      @extend .mt-1;
+      right: 0;
+      top: 0;
+      position: absolute;
+
+      content: "#{$element} > div.wrapper";
+    }
+  }
+}
