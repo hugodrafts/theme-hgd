@@ -1,0 +1,7 @@
+.main-banner {
+  @include hgd-block("div.main-banner", "primary", "auto");
+
+  img {
+    @extend .img-fluid;
+  }
+}

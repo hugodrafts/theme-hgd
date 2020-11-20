@@ -1,0 +1,3 @@
+div#page-navigation {
+  @include hgd-region("div#page-navigation", "info", "auto", false);
+}

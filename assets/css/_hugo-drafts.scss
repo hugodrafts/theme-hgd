@@ -9,7 +9,7 @@
     @extend .badge-dark;
     position: absolute;
     
-    content: "body";
+    content: "мегарегион: body";
 
     @extend .m-1;
     right: 0;
@@ -50,7 +50,7 @@
     @extend .badge-#{$class};
     position: absolute;
     
-    content: $element;
+    content: "регион: " + $element;
 
     @extend .m-1;
     right: 0;
@@ -61,6 +61,7 @@
     @extend .border-#{$class};
     @extend .rounded;
     position: relative;
+
     @if $center {
       @extend .d-flex;
       @extend .justify-content-center;
@@ -83,4 +84,28 @@
       content: "#{$element} > div.wrapper";
     }
   }
+}
+
+@mixin hgd-block($element, $class: secondary, $min-height: 200px) {
+  @extend .border;
+  @extend .border-#{$class};
+  @extend .rounded;
+  min-height: $min-height;
+  position: relative;
+
+  margin-top: 30px;
+
+  // &:hover {
+    &:before {
+      @extend .badge;
+      @extend .badge-#{$class};
+      position: absolute;
+      
+      content: "блок: " + $element;
+  
+      @extend .m-1;
+      right: 0;
+      bottom: 0;
+    }
+  // }
 }

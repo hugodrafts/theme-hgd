@@ -5,7 +5,13 @@
   
   <body>
     <div class="wrapper">
+      {{- if not .Site.Params.Regions.Header.Disable -}}
       {{- partial "regions/defs/header.html" . -}}
+      {{- end -}}
+
+      {{- if not .Site.Params.Regions.Navigation.Disable -}}
+      {{- partial "regions/defs/navigation.html" . -}}
+      {{- end -}}
 
       <article id="page-content">
         <div class="wrapper">
@@ -13,9 +19,13 @@
         </div>
       </article>
 
+      {{- if not .Site.Params.Regions.Footer.Disable -}}
       {{- partial "regions/defs/footer.html" . -}}
+      {{- end -}}
 
+      {{- if not .Site.Params.Regions.Rights.Disable -}}
       {{- partial "regions/defs/rights.html" . -}}
+      {{- end -}}
     </div>
   </body>
 </html>

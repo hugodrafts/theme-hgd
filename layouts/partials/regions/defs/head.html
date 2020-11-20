@@ -1,7 +1,12 @@
 <head>
-  {{ $css := resources.Get "css/style.scss" }}
-  {{ $css = $css | toCSS | minify | fingerprint }}
+  {{- $css := resources.Get "css/style.scss" -}}
+  {{- $css = $css | toCSS | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{- $title := .Site.Title -}}
+  {{- with .Title -}}
+    {{- $title = . -}}
+  {{- end -}}
+  <title>{{ $title }}</title>
 
   {{- partial "regions/head.html" . -}}
 </head>

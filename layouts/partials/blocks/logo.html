@@ -1,0 +1,19 @@
+{{- $logoClass := "" -}}
+{{- $height := 150 -}}
+{{- $width := 200 -}}
+
+{{- with .width -}}
+  {{- $width = . -}}
+{{- end -}}
+
+{{- with .height -}}
+  {{- $height = . -}}
+{{- end -}}
+
+{{- $imageUrl := printf "https://via.placeholder.com/%dx%d" $width $height -}}
+
+<div class="page-logo {{ $logoClass }}">
+  <a href="/">
+    <img src="{{ $imageUrl }}" width="{{ $width }}" height="{{ $height }}" />
+  </a>
+</div>

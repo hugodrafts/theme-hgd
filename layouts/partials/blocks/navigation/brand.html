@@ -1,0 +1,11 @@
+{{ $url := "/" }}
+{{ with .url }}
+  {{ $url = . }}
+{{ end }}
+
+{{ $text := "NavBar" }}
+{{ with .text }}
+  {{ $text = . }}
+{{ end }}
+
+<a class="navbar-brand" href="{{ $url }}">{{ $text }}</a>

@@ -1,7 +1,12 @@
 @import "regions/body";
 @import "regions/header";
+@import "regions/navigation";
 @import "regions/content";
 @import "regions/footer";
 @import "regions/rights";
+
+@import "blocks/logo";
+@import "blocks/main-banner";
+@import "blocks/greetings";
 
 @import "theme-local";

@@ -1,0 +1,10 @@
+[params]
+  [params.regions]
+    [params.regions.header]
+      disable = false
+    [params.regions.navigation]
+      disable = false
+    [params.regions.footer]
+      disable = false
+    [params.regions.rights]
+      disable = false
