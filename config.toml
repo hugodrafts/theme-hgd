@@ -1,10 +1,40 @@
-[params]
-  [params.regions]
-    [params.regions.header]
-      disable = false
-    [params.regions.navigation]
-      disable = false
-    [params.regions.footer]
-      disable = false
-    [params.regions.rights]
-      disable = false
+# [params]
+#   [params.regions]
+#     [params.regions.header]
+#       disable = false
+#     [params.regions.navigation]
+#       disable = false
+#     [params.regions.footer]
+#       disable = false
+#     [params.regions.rights]
+#       disable = false
+
+[params.regions]
+
+[params.regions.header]
+name="header"
+weight=100
+disable=false
+htmlElement="header"
+
+[params.regions.navigation]
+name="navigation"
+weight=200
+disable=false
+
+[params.regions.content]
+name="content"
+weight=300
+disable=false
+htmlElement="article"
+
+[params.regions.footer]
+name="footer"
+weight=400
+disableWrapper=false
+htmlElement="footer"
+
+[params.regions.rights]
+name="rights"
+weight=500
+disable=false

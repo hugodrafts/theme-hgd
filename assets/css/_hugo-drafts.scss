@@ -56,7 +56,7 @@
     right: 0;
   }
 
-  > div.wrapper {
+  > div.region-wrapper {
     @extend .border;
     @extend .border-#{$class};
     @extend .rounded;

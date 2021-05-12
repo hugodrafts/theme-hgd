@@ -11,6 +11,9 @@
 {{- end -}}
 
 {{- $imageUrl := printf "https://via.placeholder.com/%dx%d" $width $height -}}
+{{- with .imageUrl -}}
+  {{- $imageUrl = . -}}
+{{- end -}}
 
 <div class="page-logo {{ $logoClass }}">
   <a href="/">
