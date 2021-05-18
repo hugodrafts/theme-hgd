@@ -1,6 +1,25 @@
 {{ $currentPage := .}}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{ range .Site.Menus.main.ByWeight }}
+  {{ if eq .Identifier "brand" }}
+    <a class="navbar-brand" href="#">
+      {{ with .Params.Image }}
+        {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Brand+%dx%d" .width .height .width .height) }}
+
+        {{ with .src }}
+          {{ $src = .src }}
+        {{ end }}
+
+        <img width="{{.width}}" height="{{.height}}"
+          src="{{ $src }}">
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </a>
+  {{ end }}
+  {{ end }}
+
   <button class="navbar-toggler" type="button" 
     data-toggle="collapse" data-target="#navbarNavAltMarkup" 
     aria-controls="navbarNavAltMarkup" aria-expanded="false" 
@@ -11,9 +30,11 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       {{ range .Site.Menus.main.ByWeight }}
-        <a class="nav-link  {{- if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}">{{ .Title }}
+      {{ if ne .Identifier "brand" }}
+        <a class="nav-link  {{- if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}">{{ .Title }} {{.Params.Image}}
           {{- if $currentPage.IsMenuCurrent "main" . -}}<span class="sr-only">(current)</span>{{- end -}}
         </a>
+      {{ end }}
       {{ end }}
     </div>
   </div>
