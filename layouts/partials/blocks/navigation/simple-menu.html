@@ -1,8 +1,10 @@
 {{ $currentPage := .}}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{ $brandExists := false }}
   {{ range .Site.Menus.main.ByWeight }}
   {{ if eq .Identifier "brand" }}
+    {{ $brandExists = true }}
     <a class="navbar-brand" href="#">
       {{ with .Params.Image }}
         {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Brand+%dx%d" .width .height .width .height) }}
@@ -18,6 +20,10 @@
       {{ end }}
     </a>
   {{ end }}
+  {{ end }}
+
+  {{ if ne $brandExists true }}
+  <span>&nbsp;</span>
   {{ end }}
 
   <button class="navbar-toggler" type="button" 
