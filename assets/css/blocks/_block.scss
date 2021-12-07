@@ -1,0 +1,5 @@
+.block {
+  @include hgd-block("div.block", "primary", "auto");
+
+  @extend .container;
+}

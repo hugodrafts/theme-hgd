@@ -7,7 +7,7 @@
     {{ $brandExists = true }}
     <a class="navbar-brand" href="#">
       {{ with .Params.Image }}
-        {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Brand+%dx%d" .width .height .width .height) }}
+        {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Logo+%dx%d" .width .height .width .height) }}
 
         {{ with .src }}
           {{ $src = .src }}
