@@ -1,0 +1,5 @@
+.block.dev:not([class*="dev-off"]) {
+  @include hgd-block("div.block", "primary", auto);
+
+  // @extend .container;
+}

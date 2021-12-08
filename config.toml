@@ -9,6 +9,10 @@
 #     [params.regions.rights]
 #       disable = false
 
+# Mode
+[params]
+  SiteMode = "dev"
+
 [params.regions]
 
 [params.regions.header]

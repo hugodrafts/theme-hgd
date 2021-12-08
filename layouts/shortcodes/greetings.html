@@ -1,4 +1,9 @@
-<div class="greetings">
+{{ $devClass := "" }}
+{{- if eq .Site.Params.SiteMode "dev" -}}
+  {{ $devClass = "dev" }}
+{{- end -}}
+
+<div class="greetings {{ $devClass }}">
   <h1>{{ .Get "title" }}</h1>
 
   {{ .Inner }}

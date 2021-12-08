@@ -1,13 +1,13 @@
-@import "regions/body";
-@import "regions/header";
-@import "regions/navigation";
-@import "regions/content";
-@import "regions/footer";
-@import "regions/rights";
+@import "hgd/regions/body";
+@import "hgd/regions/header";
+@import "hgd/regions/navigation";
+@import "hgd/regions/content";
+@import "hgd/regions/footer";
+@import "hgd/regions/rights";
 
-@import "blocks/logo";
-@import "blocks/main-banner";
-@import "blocks/greetings";
-@import "blocks/block";
+@import "hgd/blocks/logo";
+@import "hgd/blocks/main-banner";
+@import "hgd/blocks/greetings";
+@import "hgd/blocks/block";
 
 @import "theme-local";
