@@ -10,7 +10,7 @@
         {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Logo+%dx%d" .width .height .width .height) }}
 
         {{ with .src }}
-          {{ $src = .src }}
+          {{ $src = . }}
         {{ end }}
 
         <img width="{{.width}}" height="{{.height}}"
