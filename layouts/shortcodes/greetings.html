@@ -3,7 +3,7 @@
   {{ $devClass = "dev" }}
 {{- end -}}
 
-<div class="greetings {{ $devClass }}">
+<div class="greetings {{ $devClass }}  {{ .Get "class" }}">
   <h1>{{ .Get "title" }}</h1>
 
   {{ .Inner }}
