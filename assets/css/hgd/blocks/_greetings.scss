@@ -1,4 +1,4 @@
-.greetings:not([class*="dev-off"]) {
+.greetings.dev:not([class*="dev-off"]) {
   @include hgd-block("div.greetings", "primary", auto);
 
   // @extend .container;
