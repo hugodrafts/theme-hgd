@@ -27,15 +27,14 @@
   {{ end }}
 
   <button class="navbar-toggler" type="button" 
-    data-toggle="collapse" data-target="#navbarNavAltMarkup" 
+    data-toggle="collapse" data-target="#main-navbar" 
     aria-controls="navbarNavAltMarkup" aria-expanded="false" 
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse"
-    id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+  <div id="main-navbar" class="collapse navbar-collapse">
+    <div class="nav navbar-nav">
       {{ range .Site.Menus.main.ByWeight }}
       {{ if ne .Identifier "brand" }}
         <a class="nav-link  {{- if $currentPage.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL }}">{{ .Title }} {{.Params.Image}}

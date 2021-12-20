@@ -3,7 +3,7 @@
   {{ $devClass = "dev" }}
 {{- end -}}
 
-<div class="block-wrapper {{ .Get "class" }}">
+<div class="block-wrapper {{ .Get "class" }}" {{- if .Get "id" -}}id="{{- .Get "id" -}}"{{- end -}}>
   <div class='block {{ .Get "class" }} {{ $devClass }}'>
     {{ $title := .Get "title" }}
     {{- if $title -}}

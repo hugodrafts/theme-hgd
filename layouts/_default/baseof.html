@@ -7,7 +7,10 @@
   {{- if eq .Site.Params.SiteMode "dev" -}}
     {{ $devClass = "dev" }}
   {{- end -}}
-  <body class="{{ $devClass }}">
+  <body class="{{ $devClass }}"
+    data-scroll-animation="true"
+    data-spy="scroll"
+    data-target="#main-navbar">
     <div class="wrapper">
       {{ range sort (.Site.Params.Regions) "weight" "asc" }}
       {{- if ne .disable true -}}
