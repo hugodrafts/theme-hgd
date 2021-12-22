@@ -1,6 +1,7 @@
 {{ $currentPage := .}}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-default fixed-top navbar-expand-lg navbar-light bg-light">
+<div class="container">
   {{ $brandExists := false }}
   {{ range .Site.Menus.main.ByWeight }}
   {{ if eq .Identifier "brand" }}
@@ -44,4 +45,5 @@
       {{ end }}
     </div>
   </div>
+</div>
 </nav>
