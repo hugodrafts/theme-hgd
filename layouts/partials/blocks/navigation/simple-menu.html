@@ -6,7 +6,7 @@
   {{ range .Site.Menus.main.ByWeight }}
   {{ if eq .Identifier "brand" }}
     {{ $brandExists = true }}
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="#region-header">
       {{ with .Params.Image }}
         {{ $src := (printf "https://via.placeholder.com/%dx%d?text=Logo+%dx%d" .width .height .width .height) }}
 
