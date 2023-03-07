@@ -8,7 +8,7 @@
 
   {{- $css := resources.Get "./css/style.scss" -}}
   {{- $css = $css | toCSS | minify | fingerprint -}}
-  <link rel="stylesheet" href="{{ $css.Permalink }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   
   {{- $title := .Site.Title -}}
   {{- with .Title -}}
@@ -16,5 +16,5 @@
   {{- end -}}
   <title>{{ $title }}</title>
 
-  <meta name="env" content="test">
+  <meta name="env" content="test2">
 </head>
