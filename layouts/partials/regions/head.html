@@ -15,4 +15,16 @@
     {{- $title = . -}}
   {{- end -}}
   <title>{{ $title }}</title>
+
+  <!-- opengraph -->
+  {{ with .Site.Params.Opengraph }}
+    <meta property="og:type" content="{{ .Type }}" />
+    <meta property="og:url"  content="{{ .Url }}" />
+    <meta property="og:image"  content="{{ .Image }}" />
+    <meta property="og:image:width"  content="{{ .ImageWidth }}" />
+    <meta property="og:image:height"  content="{{ .ImageHeight }}" />
+  {{ end }}
+  <!-- <meta property="og:type" content="video" /> -->
+
+  <!-- /opengraph -->
 </head>
